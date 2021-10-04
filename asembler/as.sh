@@ -1,0 +1,1 @@
+g++ -o asembler main.cpp asembler.cpp
