@@ -1,4 +1,4 @@
-#include "linker.h"
+#include "../inc/linker.h"
 #include<iostream>
 #include<sstream>
 #include<math.h>
