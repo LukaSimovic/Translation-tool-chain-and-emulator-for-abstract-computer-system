@@ -1,1 +1,1 @@
-g++ -o linker linker.cpp main.cpp
+g++ -o linker ./src/linker.cpp ./src/main.cpp
