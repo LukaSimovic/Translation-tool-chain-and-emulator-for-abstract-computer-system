@@ -1,0 +1,1 @@
+g++ -o linker linker.cpp main.cpp
