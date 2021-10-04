@@ -1,1 +1,1 @@
-g++ -o asembler main.cpp asembler.cpp
+g++ -o asembler ./src/main.cpp ./src/asembler.cpp
