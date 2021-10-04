@@ -1,0 +1,61 @@
+TABELA SIMBOLA:
+Ime		Sekcija		Offset	LGE	Size	RBR
+-------------------------------------------------------------
+undefined	undefined	0	100	0	-1
+absolute	absolute	0	100	6	0
+ivt		ivt		0	100	16	1
+myStart		-1		-1	001	-1	2
+myCounter	-1		-1	001	-1	3
+isr		isr		0	100	62	4
+term_out	0		0	100	-1	5
+term_in		0		2	100	-1	6
+asciiCode	0		4	100	-1	7
+isr_reset	4		0	100	-1	8
+isr_timer	4		5	100	-1	9
+isr_terminal	4		22	100	-1	10
+
+TABELE SEKCIJA:
+ --- SEKCIJA: absolute ---
+Offset	Sadrzaj
+0	00 FF
+2	02 FF
+4	54 00
+
+ --- SEKCIJA: ivt ---
+Offset	Sadrzaj
+0	00 00
+2	00 00
+4	05 00
+6	16 00
+8	00 00 00 00 00 00 00 00
+
+ --- SEKCIJA: isr ---
+Offset	Sadrzaj
+0	50 ff 00 00 00
+5	b0 06 12
+8	a0 0f 00 00 54
+d	b0 0f 04 FF 00
+12	a0 06 42
+15	20
+16	b0 06 12
+19	b0 16 12
+1c	a0 0f 04 FF 02
+21	b0 0f 04 FF 00
+26	a0 07 03 00 00
+2b	a0 1f 00 00 01
+30	70 01
+32	b0 0f 04 00 00
+37	a0 16 42
+3a	a0 06 42
+3d	20
+
+
+RELOKACIONI ZAPISI:
+Sekcija	Offset	Tip relokacije	Simbol	Addend	Endian
+------------------------------------------------
+1	0	R_VN16_16	4	0	1
+1	4	R_VN16_16	4	0	1
+1	6	R_VN16_16	4	0	1
+4	3	R_VN16_16	2	0	0
+4	29	R_VN16_PC16	3	-2	0
+4	35	R_VN16_16	3	0	0
