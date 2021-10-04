@@ -1,0 +1,37 @@
+TABELA SIMBOLA:
+Ime		Sekcija		Offset	LGE	Size	RBR
+-------------------------------------------------------------
+undefined	undefined	0	100	0	-1
+absolute	absolute	0	100	2	0
+myStart		3		0	010	-1	1
+myCounter	6		0	010	-1	2
+myCode		myCode		0	100	28	3
+tim_cfg		0		0	100	-1	4
+wait		3		10	100	-1	5
+myData		myData		0	100	2	6
+
+TABELE SEKCIJA:
+ --- SEKCIJA: absolute ---
+Offset	Sadrzaj
+0	10 FF
+
+ --- SEKCIJA: myCode ---
+Offset	Sadrzaj
+0	a0 0f 00 00 01
+5	b0 0f 04 FF 10
+a	a0 0f 04 00 00
+f	a0 1f 00 00 05
+14	74 01
+16	52 ff 00 00 0a
+1b	00
+
+ --- SEKCIJA: myData ---
+Offset	Sadrzaj
+0	00 00
+
+
+RELOKACIONI ZAPISI:
+Sekcija	Offset	Tip relokacije	Simbol	Addend	Endian
+------------------------------------------------
+3	d	R_VN16_16	2	0	0
+3	19	R_VN16_16	3	0	0
