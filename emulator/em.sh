@@ -1,1 +1,1 @@
-g++ -o emulator emulator.cpp main.cpp
+g++ -o emulator ./src/emulator.cpp ./src/main.cpp
